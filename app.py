@@ -10,6 +10,7 @@ load_dotenv()
 
 # Настройки приложения из .env
 SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-key')
+# Если переменная DATABASE_URL не задана, по умолчанию используем локальную папку
 DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///instance/feedback_v5.db')
 DEBUG_MODE = os.getenv('DEBUG', 'False') == 'True'
 
