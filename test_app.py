@@ -12,7 +12,7 @@ class FeedbackTestCase(unittest.TestCase):
 
     def test_categories_presence(self):
         response = self.app.get('/')
-        # Ищем категорию, которая есть в списке в index.html
+        # Ищем категорию, которая есть в списке 
         expected_text = 'Техподдержка'.encode('utf-8')
         self.assertIn(expected_text, response.data)
 
